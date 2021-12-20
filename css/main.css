@@ -24,4 +24,37 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.bulb > .light {
+    line-height: 10px;
+    background-color: none;
+    height: 220px;
+    animation-name: blinking;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 
+    border-radius: 50%;
+    box-shadow: 0 0 80px #f00;
+}
+
+@keyframes blinking {
+    0% {
+        background-color: rgb(255, 4, 4);
+        box-shadow: 0 0 80px rgb(255, 4, 4);
+        opacity: 1;
+    }
+    33% {
+        background-color: rgb(28, 170, 0);
+        box-shadow: 0 0 80px rgb(28, 170, 0);
+        opacity: 1;
+    }
+    66% {
+        background-color: rgb(3, 40, 250);
+        box-shadow: 0 0 80px rgb(3, 40, 250);
+        opacity: 1;
+    }
+    100% {
+        background-color: rgb(255, 4, 4);
+        box-shadow: 0 0 80px rgb(255, 4, 4);
+        opacity: 1;
+    }
+}
